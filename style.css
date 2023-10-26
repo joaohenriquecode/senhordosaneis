@@ -1,0 +1,107 @@
+@charset "utf-8";
+@font-face {
+    font-family:joao;
+    src: url(./fonts/Spiderg.ttf);
+ }
+body{
+    margin: 0;
+    padding: 0;
+ 
+    background: #d4d1d1;
+}
+
+h1{
+    text-align: center;
+    font-family: joao;
+    font-size: 3em;
+}
+.container{
+    height: 460px;
+    width: 800px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.imagem img{
+    height: 100%;
+    width: 100%;
+}
+
+.bar {
+    background-color: #f74605;
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#imagem2:checked ~ .navegacao{
+    background-color: #ffffff;
+}
+
+.navegacao{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.bar:hover{
+    background: #0422ca;
+}
+
+input{
+    display: none;
+}
+
+.imagens{
+    display: flex;
+    height: 100%;
+    width: 600%;
+}
+
+.imagem{
+    width: 16.6666666667%;
+    transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#imagem1:checked ~ .img1{
+    margin-left: 0;
+}
+
+#imagem2:checked ~ .img1 {
+    margin-left: -16.6666666667% ;
+}
+
+#imagem3:checked ~ .img1 {
+    margin-left: -33.3333333333%;
+}
+
+#imagem4:checked ~ .img1 {
+    margin-left: -50%;
+}
+
+#imagem5:checked ~ .img1 {
+    margin-left: -66.6666666667%;
+}
+
+#imagem6:checked ~ .img1 {
+    margin-left: -83.3333333333%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+   left: 50%;
+   transform: translate(-50%);
+   font-size: 1.5em;
+  
+   font-weight: 600;
+   font-family: joao;
+}
